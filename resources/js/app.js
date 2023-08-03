@@ -1,7 +1,11 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+import.meta.glob([
+    "../img/**"
+]);
 
-window.Alpine = Alpine;
+// Import our custom CSS
+import '../scss/app.scss';
 
-Alpine.start();
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';

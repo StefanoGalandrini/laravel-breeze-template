@@ -25,7 +25,6 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function () {
         Route::get('/', [AdminPageController::class, 'dashboard'])->name('dashboard');
-        Route::resource('projects', ProjectsController::class);
     });
 
 

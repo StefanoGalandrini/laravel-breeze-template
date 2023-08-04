@@ -29,7 +29,7 @@
 
 				{{-- Password --}}
 				<div class="mb-4">
-					<label for="passoword" class="form-label">Password</label>
+					<label for="password" class="form-label">Password</label>
 					<input type="password" class="form-control" id="password" name="password" required autocomplete="new-password">
 					{{-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> --}}
 				</div>
@@ -39,7 +39,7 @@
 					<label for="password_conf" class="form-label">Confirm Password</label>
 					<input type="password" class="form-control" id="password_conf" name="password_confirmation" required
 						autocomplete="new-password">
-					{{-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> --}}
+					{{-- <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" /> --}}
 				</div>
 
 				<div class="d-flex justify-content-between mt-4 align-items-center mt-5">

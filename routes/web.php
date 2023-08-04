@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [GuestPageController::class, 'home'])->name('guest.home');
 
 // Routes for Admins
-Route::get('/admin', [AdminPageController::class, 'admin.dashboard'])->middleware(['auth', 'verified'])->name('admin.dashboard');
+Route::get('/admin', [AdminPageController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('admin.dashboard');
 
 Route::middleware('auth')
     ->name('admin.')

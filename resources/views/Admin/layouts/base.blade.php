@@ -12,11 +12,11 @@
 <body class="bg-dark text-white">
 	@include('admin.includes.header')
 
-	<div id="page-title" class="text-center bg-dark text-white">
-		@yield('page-title', 'Default Title')
+	<div id="page-title" class="py-5 text-center bg-dark text-white">
+		@yield('page-title', '')
 	</div>
 
-	<div class="container-fluid d-flex align-items-center justify-content-center px-4 py-2 rounded border">
+	<div class="container w-100 d-flex align-items-center justify-content-center py-2 rounded border">
 
 		<main class="w-100">
 			@yield('contents')

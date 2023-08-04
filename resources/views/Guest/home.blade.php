@@ -7,19 +7,16 @@
 
 	<title>Laravel</title>
 
+	<!-- Scripts -->
+	@vite(['resources/scss/app.scss', 'resources/js/app.js'])
+
 	<!-- Fonts -->
 	<link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
 	<!-- Styles -->
 	<style>
-		.welcome {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			height: 100vh;
-			justify-content: start;
-			align-items: center;
-			background-color: rgb(30, 30, 30);
+		body {
+			background-color: rgb(30, 30, 30) !important;
 		}
 
 		img {
@@ -36,34 +33,33 @@
 
 <body>
 
-	<div class="d-flex justify-center py-4">
+	<div class="w-75 d-flex justify-content-end py-4">
 		@if (Route::has('login'))
-			<div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+			<div class="d-none d-sm-block px-6 py-4">
 				@auth
-					<a href="{{ route('admin.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+					<a href="{{ route('admin.dashboard') }}" class="text-white text-decoration-none m-2">Dashboard</a>
 				@else
-					<a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+					<a href="{{ route('login') }}" class="text-white text-decoration-none m-2">Log in</a>
 
 					@if (Route::has('register'))
-						<a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+						<a href="{{ route('register') }}" class="ms-4 text-white text-decoration-none">Register</a>
 					@endif
 				@endauth
 			</div>
 		@endif
-
-		<div class="w-100 mx-auto">
-			<div class="welcome">
-				<div class="logo">
-					<img src="{{ Vite::asset('resources/img/home/laravel.png') }}" alt="Logo Laravel">
-					<img src="{{ Vite::asset('resources/img/home/vite-logo.png') }}" alt="Logo Vite">
-				</div>
-				<h1>Laravel-Breeze Template</h1>
-			</div>
-			<div class="text-center">
-				Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-			</div>
-		</div>
 	</div>
+
+	<div class="w-100 mx-auto">
+		<div class="d-flex flex-column justify-content-start align-items-center vh-100">
+			<div class="logo">
+				<img src="{{ Vite::asset('resources/img/home/laravel.png') }}" alt="Logo Laravel">
+				<img src="{{ Vite::asset('resources/img/home/vite-logo.png') }}" alt="Logo Vite">
+			</div>
+			<h1>Laravel-Breeze Template</h1>
+		</div>
+		<div class="text-center">
+			Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+		</div>
 	</div>
 </body>
 
